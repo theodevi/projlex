@@ -101,6 +101,106 @@
               </div>
 
             <div class="container-fluid">
+                <p>Грамматические признаки</p>
+                <label for="myMultiselect5" class="multiselect5" >Число</label>
+                <div id="myMultiselect5" class="multiselect5">
+                  <div id="mySelectLabel5" class="selectBox5" onclick="toggleCheckboxArea5()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect5"></div>
+                  </div>
+                  <div id="mySelectOptions5">
+                    <label for="sg"><input type="checkbox" id="sg" onchange="checkboxStatusChange5()" value="ед" /> единственное</label>
+                    <label for="pl"><input type="checkbox" id="pl" onchange="checkboxStatusChange5()" value="мн" /> множественное</label>
+                  </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <label for="myMultiselect6" class="multiselect6" >Род</label>
+                <div id="myMultiselect6" class="multiselect6">
+                  <div id="mySelectLabel6" class="selectBox6" onclick="toggleCheckboxArea6()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect6"></div>
+                  </div>
+                  <div id="mySelectOptions6">
+                    <label for="f"><input type="checkbox" id="f" onchange="checkboxStatusChange6()" value="ж" /> женский</label>
+                    <label for="m"><input type="checkbox" id="m" onchange="checkboxStatusChange6()" value="м" /> мужской</label>
+                    <label for="g"><input type="checkbox" id="g" onchange="checkboxStatusChange6()" value="ср" /> средний</label>
+                  </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <label for="myMultiselect7" class="multiselect6" >Степень</label>
+                <div id="myMultiselect7" class="multiselect7">
+                  <div id="mySelectLabel7" class="selectBox7" onclick="toggleCheckboxArea7()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect7"></div>
+                  </div>
+                  <div id="mySelectOptions7">
+                    <label for="comp"><input type="checkbox" id="comp" onchange="checkboxStatusChange7()" value="ср" /> сравнительная</label>
+                    <label for="super"><input type="checkbox" id="super" onchange="checkboxStatusChange7()" value="прев" /> превосходная</label>
+                    <label for="pos"><input type="checkbox" id="pos" onchange="checkboxStatusChange7()" value="пол" /> положительная</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <label for="myMultiselect8" class="multiselect8" >Вид</label>
+                <div id="myMultiselect8" class="multiselect8">
+                  <div id="mySelectLabel8" class="selectBox8" onclick="toggleCheckboxArea8()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect8"></div>
+                  </div>
+                  <div id="mySelectOptions8">
+                    <label for="sh"><input type="checkbox" id="sh" onchange="checkboxStatusChange8()" value="сов" /> совершенный</label>
+                    <label for="lg"><input type="checkbox" id="lg" onchange="checkboxStatusChange8()" value="несов" /> несовершенный</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <label for="myMultiselect9" class="multiselect9" >Краткая форма</label>
+                <div id="myMultiselect9" class="multiselect9">
+                  <div id="mySelectLabel9" class="selectBox9" onclick="toggleCheckboxArea9()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect9"></div>
+                  </div>
+                  <div id="mySelectOptions9">
+                    <label for="y"><input type="checkbox" id="y" onchange="checkboxStatusChange9()" value="да" /> да</label>
+                    <label for="n"><input type="checkbox" id="n" onchange="checkboxStatusChange9()" value="нет" /> нет</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                #НЕ МОГУ НАЙТИ ГДЕ ЭТО
+                <label for="myMultiselect0" class="multiselect0" > ITYPE</label>
+                <div id="myMultiselect0" class="multiselect0">
+                  <div id="mySelectLabel0" class="selectBox0" onclick="toggleCheckboxArea0()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect0"></div>
+                  </div>
+                  <div id="mySelectOptions0">
+                    <label for="one"><input type="checkbox" id="one" onchange="checkboxStatusChange0()" value="да" /> да</label>
+                    <label for="two"><input type="checkbox" id="two" onchange="checkboxStatusChange0()" value="нет" /> нет</label>
+                  </div>
+                </div>
+            </div>
+
+
+
+            <div class="container-fluid">
               <label class="col-md-4 control-label" for="Example search">Поиск по глоссам</label>
               <div class="col-md-4">
               <input id="Example search" name="Example search" type="text" class="form-control input-md">
@@ -185,27 +285,19 @@
               </div>
             </div>
 
+
             <div class="container-fluid">
-            <div class="form-group col-sm-8">
-                  <label class="col-md-4 control-label" for="Example search">Год написания</label>
+              <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Дата раннего списка (год) </label>
                       <div class="col-md-4">
-                      <input id="Example search" name="Example search" type="text" class="form-control input-md">
+                      Верхняя граница: <input id="Example search" name="Example search" type="text" class="form-control input-md 1"> Нижняя граница <input id="Example search" name="Example search" type="text" class="form-control input-md 2">
                       </div>
               </div>
             </div>
 
             <div class="container-fluid">
               <div class="form-group col-sm-8">
-                  <label class="col-md-4 control-label" for="Example search">Год написания (интервал) </label>
-                      <div class="col-md-4">
-                      <input id="Example search" name="Example search" type="text" class="form-control input-md 1"> — <input id="Example search" name="Example search" type="text" class="form-control input-md 2">
-                      </div>
-              </div>
-            </div>
-
-            <div class="container-fluid">
-              <div class="form-group col-sm-8">
-                <label for="cent">Век написания</label>
+                <label for="cent">Дата раннего списка (век - нижняя граница)</label>
                     <select name="cent" id="cent">
                       <option value="11">XI</option>
                       <option value="12">XII</option>
@@ -220,25 +312,7 @@
 
             <div class="container-fluid">
               <div class="form-group col-sm-8">
-                  <label class="col-md-4 control-label" for="Example search">Год первого упоминания</label>
-                      <div class="col-md-4">
-                      <input id="Example search" name="Example search" type="text" class="form-control input-md">
-                      </div>
-              </div>
-            </div>
-
-            <div class="container-fluid">
-              <div class="form-group col-sm-8">
-                  <label class="col-md-4 control-label" for="Example search">Год первого упоминания (интервал) </label>
-                      <div class="col-md-4">
-                      <input id="Example search" name="Example search" type="text" class="form-control input-md 1"> — <input id="Example search" name="Example search" type="text" class="form-control input-md 2">
-                      </div>
-              </div>
-            </div>
-
-            <div class="container-fluid">
-              <div class="form-group col-sm-8">
-                <label for="cent">Век первого упоминания</label>
+                <label for="cent">Дата раннего списка (век - верхняя граница)</label>
                     <select name="cent" id="cent">
                       <option value="11">XI</option>
                       <option value="12">XII</option>
@@ -250,6 +324,8 @@
                     </select>
               </div>
             </div>
+
+
 
     </div>
     </div>
