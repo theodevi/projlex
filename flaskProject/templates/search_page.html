@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Search Page</title>
+    <script src="../static/javascript/search.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-5.0.0-beta1-dist/css/search_word.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">Словарь русского языка XI–XVII веков </a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="main_page.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="search1.html">Поиск по словарю</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="source_search.html">Поиск по списку источников</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="full_list.html">Список заголовочных форм</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="column">
+            <fieldset>
+                <legend>Выберите основной элемент поиска</legend>
+
+                <div>
+                  <input type="radio" id="huey" name="drone" value="huey"
+                    <div class="container-fluid">
+                      <label class="col-md-4 control-label" for="Title word">Поиск по заголовочному слову</label>
+                      <div class="col-md-4">
+                      <input id="Title word" name="Title word" type="text" class="form-control input-md">
+                      </div>
+                    </div>
+                </div>
+
+                <div>
+                  <input type="radio" id="dewey" name="drone" value="dewey">
+                    <div class="container-fluid">
+                      <label class="col-md-4 control-label" for="Word mask">Поиск по маске</label>
+                      <div class="col-md-4">
+                      <input id="Word mask" name="Word mask" type="text" placeholder="'_' - любой символ; '%' - любое количество любых символов" class="form-control input-md">
+
+                      </div>
+                    </div>
+                </div>
+
+                <div>
+                  <input type="radio" id="louie" name="drone" value="louie">
+                    <div class="container-fluid">
+                      <label class="col-md-4 control-label" for="Example search">Поиск по форме слова</label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md">
+
+                      </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="container-fluid">
+                  <label class="col-md-4 control-label" for="Title word">Поиск по заголовочному слову</label>
+                  <div class="col-md-4">
+                  <input id="Title word" name="Title word" type="text" class="form-control input-md">
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <label class="col-md-4 control-label" for="Word mask">Поиск по маске</label>
+              <div class="col-md-4">
+              <input id="Word mask" name="Word mask" type="text" placeholder="'_' - любой символ; '%' - любое количество любых символов" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <label class="col-md-4 control-label" for="Example search">Поиск по примерам</label>
+              <div class="col-md-4">
+              <input id="Example search" name="Example search" type="text" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <label class="col-md-4 control-label" for="Example search">Поиск по форме слова</label>
+              <div class="col-md-4">
+              <input id="Example search" name="Example search" type="text" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <label class="col-md-4 control-label" for="Example search">Поиск по зоне фразеологии</label>
+              <div class="col-md-4">
+              <input id="Example search" name="Example search" type="text" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <label class="col-md-4 control-label" for="Example search">Поиск по элементам толкования</label>
+              <div class="col-md-4">
+              <input id="Example search" name="Example search" type="text" class="form-control input-md">
+
+              </div>
+            </div>
+            <!-- Select Basic -->
+              <div class="container-fluid">
+                <label for="myMultiselect" class="multiselect" >Часть речи</label>
+                <div id="myMultiselect" class="multiselect">
+                  <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxArea()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="mySelectOptions">
+                    <label for="one"><input type="checkbox" id="one" onchange="checkboxStatusChange()" value="Сущ(М)" /> существительное (мужской род)</label>
+                    <label for="two"><input type="checkbox" id="two" onchange="checkboxStatusChange()" value="Сущ(Ж)" /> существительное (женский род)</label>
+                    <label for="three"><input type="checkbox" id="three" onchange="checkboxStatusChange()" value="Сущ(С)" /> существительное (средний род)</label>
+                    <label for="four"><input type="checkbox" id="four" onchange="checkboxStatusChange()" value="Прил" /> прилагательное</label>
+                    <label for="five"><input type="checkbox" id="five" onchange="checkboxStatusChange()" value="Гл" /> глагол</label>
+                    <label for="six"><input type="checkbox" id="six" onchange="checkboxStatusChange()" value="Н" /> наречие</label>
+                    <label for="seven"><input type="checkbox" id="seven" onchange="checkboxStatusChange()" value="С" /> союз</label>
+                    <label for="eight"><input type="checkbox" id="eight" onchange="checkboxStatusChange()" value="Числ" /> числительное</label>
+                    <label for="nine"><input type="checkbox" id="nine" onchange="checkboxStatusChange()" value="Ч" /> частица</label>
+                    <label for="ten"><input type="checkbox" id="ten" onchange="checkboxStatusChange()" value="Межд" /> междометие</label>
+                    <label for="eleven"><input type="checkbox" id="eleven" onchange="checkboxStatusChange()" value="Мест" /> местоимение</label>
+                    <label for="twelve"><input type="checkbox" id="twelve" onchange="checkboxStatusChange()" value="Предл" /> предлог</label>
+                  </div>
+                </div>
+              </div>
+
+            <div class="container-fluid">
+              <label class="col-md-4 control-label" for="Example search">Поиск по глоссам</label>
+              <div class="col-md-4">
+              <input id="Example search" name="Example search" type="text" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <label class="col-md-4 control-label" for="Example search">Поиск по этимологии</label>
+              <div class="col-md-4">
+              <input id="Example search" name="Example search" type="text" class="form-control input-md">
+
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                <label for="myMultiselect2">Тип источника</label>
+                <div id="myMultiselect2" class="multiselect2">
+                  <div id="mySelectLabel2" class="selectBox2" onclick="toggleCheckboxArea2()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect2"></div>
+                  </div>
+                  <div id="mySelectOptions2">
+                    <label for="thirteen"><input type="checkbox" id="thirteen" onchange="checkboxStatusChange2()" value="пер" /> переводной</label>
+                    <label for="fourteen"><input type="checkbox" id="fourteen" onchange="checkboxStatusChange2()" value="н-пер" /> не переводной</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                <label for="myMultiselect3">Язык оригинала переводного источника</label>
+                <div id="myMultiselect3" class="multiselect3">
+                  <div id="mySelectLabel3" class="selectBox3" onclick="toggleCheckboxArea3()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect3"></div>
+                  </div>
+                  <div id="mySelectOptions3">
+                    <label for="fiteen"><input type="checkbox" id="fiteen" onchange="checkboxStatusChange3()" value="grc" /> греческий</label>
+                    <label for="sixteen"><input type="checkbox" id="sixteen" onchange="checkboxStatusChange3()" value="lat" /> латынь</label>
+                    <label for="seventeen"><input type="checkbox" id="seventeen" onchange="checkboxStatusChange3()" value="deu" /> немецкий</label>
+                    <label for="eighteen"><input type="checkbox" id="eighteen" onchange="checkboxStatusChange3()" value="pl" /> польский</label>
+                    <label for="nineteen"><input type="checkbox" id="nineteen" onchange="checkboxStatusChange3()" value="czh" /> чешский</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                <label for="myMultiselect4">Жанр источника</label>
+                <div id="myMultiselect4" class="multiselect4">
+                  <div id="mySelectLabel4" class="selectBox4" onclick="toggleCheckboxArea4()">
+                    <select class="form-select">
+                      <option>Nothing is selected</option>
+                    </select>
+                    <div class="overSelect4"></div>
+                  </div>
+                  <div id="mySelectOptions4">
+                    <label for="ab"><input type="checkbox" id="ab" onchange="checkboxStatusChange4()" value="bible" /> Библия и апокрифы</label>
+                    <label for="ac"><input type="checkbox" id="ac" onchange="checkboxStatusChange4()" value="gd" /> Богословие</label>
+                    <label for="ad"><input type="checkbox" id="ad" onchange="checkboxStatusChange4()" value="hom" /> Гомилетика</label>
+                    <label for="ae"><input type="checkbox" id="ae" onchange="checkboxStatusChange4()" value="ag" /> Агиография</label>
+                    <label for="af"><input type="checkbox" id="af" onchange="checkboxStatusChange4()" value=bel" /> Повести и беллетристика</label>
+                    <label for="ag"><input type="checkbox" id="ag" onchange="checkboxStatusChange4()" value="lith" /> Литургика</label>
+                    <label for="ah"><input type="checkbox" id="ah" onchange="checkboxStatusChange4()" value="ep" /> Эпистолография</label>
+                    <label for="aj"><input type="checkbox" id="aj" onchange="checkboxStatusChange4()" value="let" /> Летопись</label>
+                    <label for="ak"><input type="checkbox" id="ak" onchange="checkboxStatusChange4()" value="chron" /> Хроника и хронография</label>
+                    <label for="al"><input type="checkbox" id="al" onchange="checkboxStatusChange4()" value="doc" /> Документы</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <div class="container-fluid">
+            <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Год написания</label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md">
+                      </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Год написания (интервал) </label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md 1"> — <input id="Example search" name="Example search" type="text" class="form-control input-md 2">
+                      </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                <label for="cent">Век написания</label>
+                    <select name="cent" id="cent">
+                      <option value="11">XI</option>
+                      <option value="12">XII</option>
+                      <option value="13">XIII</option>
+                      <option value="14">XIV</option>
+                      <option value="15">XV</option>
+                      <option value="16">XVI</option>
+                      <option value="17">XVII</option>
+                    </select>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Год первого упоминания</label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md">
+                      </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Год первого упоминания (интервал) </label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md 1"> — <input id="Example search" name="Example search" type="text" class="form-control input-md 2">
+                      </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                <label for="cent">Век первого упоминания</label>
+                    <select name="cent" id="cent">
+                      <option value="11">XI</option>
+                      <option value="12">XII</option>
+                      <option value="13">XIII</option>
+                      <option value="14">XIV</option>
+                      <option value="15">XV</option>
+                      <option value="16">XVI</option>
+                      <option value="17">XVII</option>
+                    </select>
+              </div>
+            </div>
+
+    </div>
+</body>
+</html>

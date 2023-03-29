@@ -2,6 +2,25 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+}
+
+.column1 {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+
+.column2 {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 .navbar {
     background:#a65238;
 }
@@ -62,7 +81,7 @@ body {
 }
 
 .text-center {
-  text-align: center !important;
+  text-align: left !important;
 }
 .my-5 {
   margin-top: 3rem !important;
@@ -73,19 +92,29 @@ body {
     color: #a65238;
 }
 
+input[type="text"] {
+    width: 300px;
+}
+
+
+label {
+  width: 800px;
+}
+
 .multiselect {
   width: 100%;
 }
 
 .container-fluid{
   width: 100%;
+  align-content: start;
 }
 .selectBox {
   position: relative;
 }
 
 .selectBox select {
-  width: 100%;
+  width: 300px;
 }
 
 .overSelect {
@@ -107,11 +136,9 @@ body {
 #mySelectOptions label {
   display: block;
   font-weight: normal;
-  display: block;
   white-space: nowrap;
   min-height: 1.2em;
   background-color: #ffffff00;
-  padding: 0 2.25rem 0 .75rem;
   /* padding: .375rem 2.25rem .375rem .75rem; */
 }
 
@@ -120,7 +147,7 @@ body {
 }
 
 .multiselect2 {
-  width: 100%;
+  width: 300px;
 }
 
 .selectBox2 {
@@ -128,7 +155,7 @@ body {
 }
 
 .selectBox2 select {
-  width: 100%;
+  width: 300px;
 }
 
 .overSelect2 {
@@ -154,7 +181,6 @@ body {
   white-space: nowrap;
   min-height: 1.2em;
   background-color: #ffffff00;
-  padding: 0 2.25rem 0 .75rem;
   /* padding: .375rem 2.25rem .375rem .75rem; */
 }
 
@@ -163,7 +189,7 @@ body {
 }
 
 .multiselect3 {
-  width: 100%;
+  width: 300px;
 }
 
 .selectBox3 {
@@ -171,7 +197,7 @@ body {
 }
 
 .selectBox3 select {
-  width: 100%;
+  width: 300px;
 }
 
 .overSelect3 {
@@ -197,7 +223,6 @@ body {
   white-space: nowrap;
   min-height: 1.2em;
   background-color: #ffffff00;
-  padding: 0 2.25rem 0 .75rem;
   /* padding: .375rem 2.25rem .375rem .75rem; */
 }
 
@@ -206,7 +231,7 @@ body {
 }
 
 .multiselect4 {
-  width: 100%;
+  width: 300px;
 }
 
 .selectBox4 {
@@ -214,7 +239,7 @@ body {
 }
 
 .selectBox4 select {
-  width: 100%;
+  width: 300px;
 }
 
 .overSelect4 {
@@ -240,10 +265,65 @@ body {
   white-space: nowrap;
   min-height: 1.2em;
   background-color: #ffffff00;
-  padding: 0 2.25rem 0 .75rem;
   /* padding: .375rem 2.25rem .375rem .75rem; */
 }
 
 #mySelectOptions4 label:hover {
   background-color: #1e90ff;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -500%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 100%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }

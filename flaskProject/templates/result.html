@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат поиска по слову</title>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-5.0.0-beta1-dist/css/results_page.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="#">Словарь русского языка XI–XVII веков </a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="main_page.html">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search1.html">Поиск по словарю</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="source_search.html">Поиск по списку источников</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="full_list.html">Список заголовочных форм</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="main">
+    <di class="text3">
+    Всего найдено {{lemmas|length}} вхождений.
+    </div>
+#YOUR CODE GOES HERE
+<br/>
+{% for i in range(0, lemmas|length) %}
+<div id="up"><b><a href="results/{{ lemmas[i][0] }}">{{ i+1}}. {{ lemmas[i][0] }}</a></b></div>{# в массиве lemmas каждая лемма лежит в собственном массиве (так выдает БД) #}
+{% endfor %}
+</div>
+</div>
+
+</body>
+</html>
+
+<div class="container-fluid">
+              <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Год написания</label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md">
+                      </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Год написания (интервал) </label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md 1"> — <input id="Example search" name="Example search" type="text" class="form-control input-md 2">
+                      </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                <label for="cent">Век написания</label>
+                    <select name="cent" id="cent">
+                      <option value="11">XI</option>
+                      <option value="12">XII</option>
+                      <option value="13">XIII</option>
+                      <option value="14">XIV</option>
+                      <option value="15">XV</option>
+                      <option value="16">XVI</option>
+                      <option value="17">XVII</option>
+                    </select>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Год первого упоминания</label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md">
+                      </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                  <label class="col-md-4 control-label" for="Example search">Год первого упоминания (интервал) </label>
+                      <div class="col-md-4">
+                      <input id="Example search" name="Example search" type="text" class="form-control input-md 1"> — <input id="Example search" name="Example search" type="text" class="form-control input-md 2">
+                      </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="form-group col-sm-8">
+                <label for="cent">Век первого упоминания</label>
+                    <select name="cent" id="cent">
+                      <option value="11">XI</option>
+                      <option value="12">XII</option>
+                      <option value="13">XIII</option>
+                      <option value="14">XIV</option>
+                      <option value="15">XV</option>
+                      <option value="16">XVI</option>
+                      <option value="17">XVII</option>
+                    </select>
+              </div>
+            </div>

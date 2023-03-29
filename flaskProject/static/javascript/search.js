@@ -14,7 +14,10 @@ window.onload = (event) => {
   initMultiselect4();
 };
 
-
+function InfoPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
 function initMultiselect() {
   checkboxStatusChange();
 
